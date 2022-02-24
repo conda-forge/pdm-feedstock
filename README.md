@@ -213,4 +213,5 @@ Feedstock Maintainers
 =====================
 
 * [@hadim](https://github.com/hadim/)
+* [@xhochy](https://github.com/xhochy/)
 
