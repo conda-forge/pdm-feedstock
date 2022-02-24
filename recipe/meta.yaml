@@ -25,7 +25,7 @@ requirements:
     - click >=7
     - idna
     - importlib-metadata  # [py<38]
-    - installer >=0.3.0,==0.3.*
+    - python-installer 0.3.*
     - packaging
     - pdm-pep517 >=0.9,<0.12
     - pep517 >=0.11.0
