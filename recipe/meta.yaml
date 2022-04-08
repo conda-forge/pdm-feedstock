@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "1.13.6" %}
+{% set version = "1.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: a30a86ff236c290f2ca315ac731819d7313a112fc6d959fc2e492d7732e94f39
+  sha256: 6546dcb8846eb52a075b97a00a9c0229c6b62190a042c44077bdae783cc6c922
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - findpython 
     - idna
     - importlib-metadata 
-    - python-installer ~=0.3.0
+    - python-installer <0.6,>=0.5.1
     - packaging 
     - pdm-pep517 <1,>=0.9
     - pep517 >=0.11.0
@@ -43,6 +43,7 @@ requirements:
     - tomlkit <1,>=0.8.0
     - typing-extensions  # [py<38]
     - wheel >=0.36.2
+    # - typing_extensions 
     # - typing_extensions 
 
 test:
