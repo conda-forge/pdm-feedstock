@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "1.14.0" %}
+{% set version = "1.14.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 6546dcb8846eb52a075b97a00a9c0229c6b62190a042c44077bdae783cc6c922
+  sha256: 170b3c1a9541bb53f91fff7b25c54afae796464ccb58caa8a0b9ff37646120dd
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -43,6 +43,7 @@ requirements:
     - tomlkit <1,>=0.8.0
     - typing-extensions  # [py<38]
     - wheel >=0.36.2
+    # - typing_extensions 
     # - typing_extensions 
     # - typing_extensions 
 
