@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "1.15.4" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: e68ec492c9c849c59468972576cef5ce88e72c49b9f575ea35314b2da50b9629
+  sha256: 36d1cf69efed0a901afd388c351802290c5a5daf2b0bf7949771d95e4cd03619
 
 build:
   number: 0
@@ -26,14 +26,14 @@ requirements:
     - blinker 
     - chardet
     - click >=7
-    - findpython 
+    - findpython >=0.2.0
     - idna
     - importlib-metadata 
     - python-installer <0.6,>=0.5.1
     - packaging 
-    - pdm-pep517 <1,>=0.9
+    - pdm-pep517 <2.0.0,>=1.0.0
     - pep517 >=0.11.0
-    - pip >=20.1
+    - pip >=20
     - platformdirs 
     - python
     - python-dotenv >=0.15
@@ -51,6 +51,12 @@ requirements:
     # - typing_extensions 
     # - typing_extensions 
     # - typing_extensions 
+    # - virtualenv >=20
+    # - unearth <1,>=0.5.1
+    # - typing_extensions 
+    # - rich >=12.3.0
+    # - requests-toolbelt 
+    # - cachecontrol >=0.12.11
 
 test:
   imports:
