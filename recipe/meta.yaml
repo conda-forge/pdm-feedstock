@@ -25,7 +25,6 @@ requirements:
   run:
     - cachecontrol >=0.12.11
     - certifi >=2022.6.15
-    - installer >=0.5.1,<0.6
     - requests-toolbelt
     - rich >=12.3.0
     - unearth >=0.6.0
@@ -50,14 +49,6 @@ requirements:
     - tomlkit >=0.8.0,<1
     - typing-extensions  # [py<38]
     - wheel >=0.36.2
-    # - typing_extensions 
-    # - typing_extensions 
-    # - typing_extensions 
-    # - typing_extensions 
-    # - typing_extensions 
-    # - typing_extensions 
-    # - typing_extensions 
-    # - typing_extensions 
 
 test:
   imports:
