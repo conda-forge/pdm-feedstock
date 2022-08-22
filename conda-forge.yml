@@ -1,6 +1,6 @@
 bot:
   automerge: true
-  run_deps_from_wheel: true
+  inspection: update-grayskull
 build_platform:
   osx_arm64: osx_64
   linux_aarch64: linux_64
