@@ -24,11 +24,11 @@ requirements:
     - pdm-pep517 >=0.3.0
   run:
     - blinker
-    - cachecontrol >= 0.12.11
+    - cachecontrol >=0.12.11
     - findpython
     - idna
     - importlib-metadata # [py<38]
-    - lockfile >= 0.9
+    - lockfile >=0.9
     - python-installer <0.6,>=0.5.1
     - packaging >=20.9
     - pdm-pep517 <2.0,>=1.0
@@ -39,13 +39,13 @@ requirements:
     - python-dotenv >=0.15
     - resolvelib <0.9,>=0.8
     - requests-toolbelt
-    - rich >= 12.3.0
+    - rich >=12.3.0
     - shellingham >=1.3.2
     - tomli >=1.1.0 # [py<311]
     - tomlkit <1,>=0.8.0
     - typing-extensions  # [py<38]
-    - unearth >= 0.6.0
-    - virtualenv >= 20
+    - unearth >=0.6.0
+    - virtualenv >=20
     - wheel >=0.36.2
 
 test:
