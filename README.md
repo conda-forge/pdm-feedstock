@@ -386,5 +386,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@daylinmorgan](https://github.com/daylinmorgan/)
+* [@theAeon](https://github.com/theAeon/)
 * [@xhochy](https://github.com/xhochy/)
 
