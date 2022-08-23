@@ -30,10 +30,7 @@ requirements:
     - unearth >=0.6.0
     - virtualenv >=20
     - blinker
-    - chardet
-    - click >=7
     - findpython >=0.2.0
-    - idna
     - importlib-metadata
     - python-installer <0.6,>=0.5.1
     - packaging >=20.9
@@ -48,7 +45,6 @@ requirements:
     - tomli >=1.1.0  # [py<311]
     - tomlkit >=0.8.0,<1
     - typing-extensions  # [py<38]
-    - wheel >=0.36.2
 
 test:
   imports:
