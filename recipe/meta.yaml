@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.1.2" %}
+{% set version = "2.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 53c697b24ab73dd2155cd8544d9ed3551cdae1d7b166885e1ced463b46869dea
+  sha256: 6fa50be65778c34148125d8fe36f8d21516f10bb306690319022181080625875
 
 build:
   number: 0
@@ -23,6 +23,7 @@ requirements:
     - python
     - pdm-pep517 >=0.3.0
   run:
+    - installer >=0.5.1,<0.6
     - cachecontrol >=0.12.11
     - certifi >=2022.6.15
     - requests-toolbelt
