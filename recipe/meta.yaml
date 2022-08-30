@@ -23,7 +23,6 @@ requirements:
     - python
     - pdm-pep517 >=0.3.0
   run:
-    - installer >=0.5.1,<0.6
     - cachecontrol >=0.12.11
     - certifi >=2022.6.15
     - requests-toolbelt
