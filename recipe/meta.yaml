@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 0807219703ac23cb444ddf66b89b3d4a5eb3a6df8cf8f2b807b5406b859a253c
+  sha256: a861d47d57bc6ef9e99edb09abd620955a37b2835019b6a8918beea3b089a3b7
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
