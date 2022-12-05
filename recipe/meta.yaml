@@ -22,7 +22,7 @@ requirements:
     - pip
     - python
   run:
-    - pyproject-hooks
+    - pyproject_hooks
     - cachecontrol >=0.12.11
     - certifi
     - requests-toolbelt
