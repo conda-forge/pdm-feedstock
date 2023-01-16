@@ -10,7 +10,7 @@ source:
   sha256: 22246d27bb60afd7b25a1c1307047867dd280dbd7acb1168d447924c5282f29c
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -23,7 +23,6 @@ requirements:
     - python
     - pdm-pep517 >=1.0
   run:
-    - flask
     - pyproject_hooks
     - cachecontrol >=0.12.11
     - certifi
