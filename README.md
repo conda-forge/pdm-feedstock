@@ -1,11 +1,11 @@
-About pdm
-=========
+About pdm-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pdm-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/pdm/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pdm-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python Development Master
 
