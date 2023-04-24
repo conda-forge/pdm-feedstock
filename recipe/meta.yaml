@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python
-    - pdm-pep517 >=1.0
+    - pdm-backend
   run:
     - pyproject_hooks
     - cachecontrol >=0.12.11
