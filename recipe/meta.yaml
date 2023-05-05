@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.5.3" %}
+{% set version = "2.5.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: b88b134ffdfc7100e981bbedc44b499e3d781666c3c12ee6ec2faddabbf7969d
+  sha256: 37dd3352ed95cd18a777683124b35ed074782ef3d1bffe420e4eaf283efe5a8f
 
 build:
   number: 0
@@ -23,6 +23,7 @@ requirements:
     - python
     - pdm-backend
   run:
+    - urllib3 <2
     - pyproject_hooks
     - cachecontrol >=0.12.11
     - certifi
