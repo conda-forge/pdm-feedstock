@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.6.1" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 105958849a2f8d9aa9ef2183a2c50eae9eb4ac47fc81272cd504fdd9c90edea2
+  sha256: e1dcaefe778c157fd4d51b88d19101cdd6ce3481ef756cafa72d46bb988c01c8
 
 build:
   number: 0
@@ -23,9 +23,11 @@ requirements:
     - python
     - pdm-backend
   run:
-    - pyproject_hooks
-    - cachecontrol >=0.12.11
+    - cacheyou
+    # cacheyou[filecache] extra
     - filelock >=3.8.0
+
+    - pyproject_hooks
     - certifi
     - requests-toolbelt
     - rich >=12.3.0
