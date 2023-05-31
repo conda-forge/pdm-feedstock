@@ -24,9 +24,10 @@ requirements:
     - pdm-backend
   run:
     - cacheyou
-    - pyproject_hooks
-    - cachecontrol >=0.12.11
+    # cacheyou[filecache] extra
     - filelock >=3.8.0
+
+    - pyproject_hooks
     - certifi
     - requests-toolbelt
     - rich >=12.3.0
