@@ -10,7 +10,7 @@ source:
   sha256: fd3a358e831504f8cb09ac7230956b139269ab3b1ee4f0c100a43e269ee0b56e
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -24,8 +24,7 @@ requirements:
     - pdm-backend
   run:
     - cachecontrol >=0.13.0
-    - cacheyou
-    # cacheyou[filecache] extra
+    # cachecontrol[filecache] extra
     - filelock >=3.8.0
 
     - pyproject_hooks
