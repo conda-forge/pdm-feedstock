@@ -35,7 +35,7 @@ requirements:
     - virtualenv >=20
     - blinker
     - findpython >=0.3.0,<1.0.0a0
-    - importlib-resources>=5  # [py<39]
+    - importlib-resources >=5  # [py<39]
     - importlib-metadata >=3.6  # [py<310]
     - python-installer <0.8,>=0.7
     - packaging >=20.9,!=22.0
