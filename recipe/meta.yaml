@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.9.2" %}
+{% set version = "2.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 53d37a84a0bd3d5dc9db3e3de19ab120d2dda82ebfcc1e4508ea7be34221181e
+  sha256: 0b1195b51e9630b5a0b063f27dfcb0120cb6ea284f1a4cd975a3a26f0856d253
 
 build:
   number: 0
@@ -34,7 +34,7 @@ requirements:
     - unearth >=0.10.0
     - virtualenv >=20
     - blinker
-    - findpython >=0.3.0,<1.0.0a0
+    - findpython >=0.4.0,<1.0.0a0
     - importlib-resources >=5  # [py<39]
     - importlib-metadata >=3.6  # [py<310]
     - python-installer <0.8,>=0.7
