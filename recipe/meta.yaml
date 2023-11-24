@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.10.3" %}
+{% set version = "2.10.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 46dafc8a4fe268c46479876e52c6967f7a9aa385e1e574e64248670a37b358ff
+  sha256: 6dfd9d4cb59043edecb2d0b47d208e55d89d333ba7197deb05cca2dfbc7a4bfb
 
 build:
   number: 0
@@ -23,6 +23,8 @@ requirements:
     - python
     - pdm-backend
   run:
+    - chardet
+    - idna
     - cachecontrol >=0.13.0
     # cachecontrol[filecache] extra
     - filelock >=3.8.0
