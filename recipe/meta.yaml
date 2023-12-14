@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.10.4" %}
+{% set version = "2.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 6dfd9d4cb59043edecb2d0b47d208e55d89d333ba7197deb05cca2dfbc7a4bfb
+  sha256: b10bc4e5394856f1639ddc9bc754d9c26323ec5b828a135c6ed35f935b054b83
 
 build:
   number: 0
@@ -23,6 +23,7 @@ requirements:
     - python
     - pdm-backend
   run:
+    - dep-logic >=0.0.2,<1.0
     - chardet
     - idna
     - cachecontrol >=0.13.0
