@@ -10,8 +10,8 @@ source:
   sha256: d04877362f95cf9ffc1d2c38b851f693706e4928840e48986ae576dad5741496
 
 build:
-  number: 0
-  skip: true  # [py<37]
+  number: 1
+  skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,12 +24,9 @@ requirements:
     - pdm-backend
   run:
     - dep-logic >=0.2.0,<1.0
-    - chardet
-    - idna
     - cachecontrol >=0.13.0
     # cachecontrol[filecache] extra
     - filelock >=3.8.0
-
     - pyproject_hooks
     - certifi
     - requests-toolbelt
@@ -42,7 +39,6 @@ requirements:
     - importlib-metadata >=3.6  # [py<310]
     - python-installer <0.8,>=0.7
     - packaging >=20.9,!=22.0
-    - pip >=20.1
     - platformdirs
     - python
     - python-dotenv >=0.15
