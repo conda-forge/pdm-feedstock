@@ -23,19 +23,14 @@ requirements:
     - python
     - pdm-backend
   run:
-    - hishel >=0.0.24,<0.1.0
-    - httpx <1,>0.20
-    - msgpack-python >=1.0
-    - pbs-installer
     - python
+
     - blinker
-    - certifi
     - packaging >=20.9,!=22.0
     - platformdirs
     - rich >=12.3.0
     - virtualenv >=20
     - pyproject_hooks
-    - requests-toolbelt
     - unearth >=0.15.0
     - dep-logic >=0.2.0,<1.0
     - findpython >=0.6.0,<1.0.0a0
@@ -44,13 +39,19 @@ requirements:
     - python-dotenv >=0.15
     - resolvelib >=1.0.1
     - python-installer <0.8,>=0.7
-    - cachecontrol >=0.13.0
-    # cachecontrol[filecache] extra
-    - filelock >=3.13
     - truststore  # [py>39]
     - tomli >=1.1.0  # [py<311]
     - importlib-resources >=5  # [py<39]
     - importlib-metadata >=3.6  # [py<310]
+    - hishel >=0.0.24,<0.1.0
+    - msgpack-python >=1.0
+    - pbs-installer
+    # pbs-installer[installer] extras
+    - zstandard >=0.21.0
+    - httpx <1,>0.20
+    # httpx[socks] extras
+    - socksio >=1,<2 
+    - filelock >=3.13
 
 test:
   imports:
