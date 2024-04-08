@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.13.2" %}
+{% set version = "2.13.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: e282bf1caf0a083fc0fb5e89ad6f79d7c579ff52c7bb58ee8587ea3d5bb9e14a
+  sha256: 92716a25ec2663b867efc9aa00010ace91a201d21548651f35c03cc419b266dd
 
 build:
   number: 0
@@ -50,7 +50,7 @@ requirements:
     - zstandard >=0.21.0
     - httpx <1,>0.20
     # httpx[socks] extras
-    - socksio >=1,<2 
+    - socksio >=1,<2
     - filelock >=3.13
 
 test:
