@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.13.3" %}
+{% set version = "2.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 92716a25ec2663b867efc9aa00010ace91a201d21548651f35c03cc419b266dd
+  sha256: 7ae6c4b5518085a703e0824ab10cbc3b7246b599ef07b8c4dcb2af1e42859190
 
 build:
   number: 0
@@ -23,6 +23,8 @@ requirements:
     - python
     - pdm-backend
   run:
+    - chardet
+    - idna
     - python
 
     - blinker
