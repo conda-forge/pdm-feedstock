@@ -10,23 +10,21 @@ source:
   sha256: 58e225850567dcadce42418db4638996df2b1378cd0830cd48afda1b455d9c72
 
 build:
-  number: 0
-  skip: true  # [py<38]
+  number: 1
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - pdm = pdm.core:main
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python
+    - python >=3.8,<3.13
     - pdm-backend
   run:
     - chardet
     - idna
-    - python
-
+    - python >=3.8,<3.13
     - blinker
     - packaging >=20.9,!=22.0
     - platformdirs
@@ -41,10 +39,10 @@ requirements:
     - python-dotenv >=0.15
     - resolvelib >=1.0.1
     - python-installer <0.8,>=0.7
-    - truststore  # [py>39]
-    - tomli >=1.1.0  # [py<311]
-    - importlib-resources >=5  # [py<39]
-    - importlib-metadata >=3.6  # [py<310]
+    # truststore
+    - tomli >=1.1.0
+    - importlib-resources >=5
+    - importlib-metadata >=3.6
     - hishel >=0.0.24,<0.1.0
     - msgpack-python >=1.0
     - pbs-installer
