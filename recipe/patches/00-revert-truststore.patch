@@ -1,0 +1,24 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 23ac9826..ba6d8e09 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -28,7 +28,7 @@ dependencies = [
+     "python-dotenv>=0.15",
+     "resolvelib>=1.0.1",
+     "installer<0.8,>=0.7",
+-    "truststore; python_version >= \"3.10\"",
++    "cachecontrol[filecache]>=0.13.0",
+     "tomli>=1.1.0; python_version < \"3.11\"",
+     "importlib-resources>=5; python_version < \"3.9\"",
+     "importlib-metadata>=3.6; python_version < \"3.10\"",
+@@ -67,8 +67,9 @@ keyring = ["keyring"]
+ template = [
+     "pdm[copier,cookiecutter]",
+ ]
++truststore = ["truststore; python_version >= \"3.10\""]
+ all = [
+-    "pdm[keyring,template]",
++    "pdm[keyring,template,truststore]",
+ ]
+
+ [project.scripts]
