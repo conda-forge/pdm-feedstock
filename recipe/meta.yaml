@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
   sha256: 58e225850567dcadce42418db4638996df2b1378cd0830cd48afda1b455d9c72
+  patches:
+     - 00-revert-truststore.patch
 
 build:
   number: 1
