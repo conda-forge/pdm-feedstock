@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.15.4" %}
+{% set version = "2.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 58e225850567dcadce42418db4638996df2b1378cd0830cd48afda1b455d9c72
+  sha256: 2e00aaa02ddd7cf39ac9ff1dbb23e98fdae6ef8cdf78fe0bfe4f0a47cffcaa42
   patches:
-     - 00-revert-truststore.patch
+    - 00-revert-truststore.patch
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -24,6 +24,7 @@ requirements:
     - python >=3.8,<3.13
     - pdm-backend
   run:
+    - requests
     - chardet
     - idna
     - python >=3.8,<3.13
