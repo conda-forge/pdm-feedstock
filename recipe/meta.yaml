@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.16.0" %}
+{% set version = "2.16.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 2e00aaa02ddd7cf39ac9ff1dbb23e98fdae6ef8cdf78fe0bfe4f0a47cffcaa42
+  sha256: b8680028b3aff3af8e15b483467da36bb9f02fcd402cf939da8ab6375d955131
   patches:
     - 00-revert-truststore.patch
 
@@ -48,7 +48,7 @@ requirements:
     - importlib-metadata >=3.6
     - hishel >=0.0.24,<0.1.0
     - msgpack-python >=1.0
-    - pbs-installer
+    - pbs-installer >=2024.4.18
     # pbs-installer[installer] extras
     - zstandard >=0.21.0
     - httpx <1,>0.20
