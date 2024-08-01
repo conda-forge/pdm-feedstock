@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.17.2" %}
+{% set version = "2.17.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: bf1e9b8e22838ec572a1f78e75dbac30ea23f3cb583655b9084740cb92f05cd3
+  sha256: f49220f225ec71258cbf7148b14a76caeac612745bedab67f9062398ea56a7a5
   patches:
     - 00-revert-truststore.patch
 
