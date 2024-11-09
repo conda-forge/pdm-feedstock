@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.20.0" %}
+{% set version = "2.20.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 9b9b44af5f0e369a3166268adf1e2f83a831dfa98000e62e162f1444073fddcb
+  sha256: 5348e9d33de381f998904a63ab18efdd6d1cf6377d45572e8b996d58dfc5b996
   patches:
     - 00-revert-truststore.patch
 
@@ -24,6 +24,8 @@ requirements:
     - python >=3.8,<3.13
     - pdm-backend
   run:
+    - certifi >=2024.8.30
+    - httpcore >=1.0.6
     - requests
     - chardet
     - idna
@@ -40,7 +42,7 @@ requirements:
     - tomlkit >=0.11.1,<1
     - shellingham >=1.3.2
     - python-dotenv >=0.15
-    - resolvelib >=1.0.1
+    - resolvelib >=1.1
     - python-installer <0.8,>=0.7
     # truststore
     - tomli >=1.1.0
