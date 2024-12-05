@@ -29,7 +29,7 @@ requirements:
     - requests
     - chardet
     - idna
-    - python >={{ python_min }},<3.13
+    - python >={{ python_min }}
     - blinker
     - packaging >=20.9,!=22.0
     - platformdirs
