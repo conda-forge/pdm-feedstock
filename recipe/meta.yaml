@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.23.0" %}
+{% set version = "2.23.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: ec5ce439648b42b928f4afa91c2b6251e6a33f40cc83779d899ca970bd9eb131
+  sha256: cf12cd2201df78a6543a5485ac1d7015a73b3a6b10c98b66dfae6ebd481386fe
   patches:
     - 00-revert-truststore.patch
 
@@ -24,6 +24,7 @@ requirements:
     - python {{ python_min }}
     - pdm-backend
   run:
+    - id >=1.5.0
     - certifi >=2024.8.30
     - httpcore >=1.0.6
     - requests
@@ -36,7 +37,7 @@ requirements:
     - rich >=12.3.0
     - virtualenv >=20
     - pyproject_hooks
-    - unearth >=0.17.0
+    - unearth >=0.17.5
     - dep-logic >=0.4.4
     - findpython >=0.6.0,<1.0.0a0
     - tomlkit >=0.11.1,<1
