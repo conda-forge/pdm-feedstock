@@ -1,23 +1,32 @@
+From e532b17e1b685d1d587cac5932862f428f0ed07d Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwe.korn@quantco.com>
+Date: Wed, 18 Jun 2025 21:21:31 +0200
+Subject: [PATCH] Revert truststore extra to enable noarch
+
+---
+ pyproject.toml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
 diff --git a/pyproject.toml b/pyproject.toml
-index 23ac9826..ba6d8e09 100644
+index e37133c..633aec3 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -28,7 +28,6 @@ dependencies = [
      "python-dotenv>=0.15",
-     "resolvelib>=1.0.1",
+     "resolvelib>=1.1",
      "installer<0.8,>=0.7",
 -    "truststore>=0.9; python_version >= \"3.10\"",
      "tomli>=1.1.0; python_version < \"3.11\"",
-     "importlib-resources>=5; python_version < \"3.9\"",
      "importlib-metadata>=3.6; python_version < \"3.10\"",
-@@ -67,8 +66,9 @@ keyring = ["keyring"]
+     "hishel>=0.0.32",
+@@ -85,8 +84,9 @@ msgpack = [
  template = [
      "pdm[copier,cookiecutter]",
  ]
 +truststore = ["truststore; python_version >= \"3.10\""]
  all = [
--    "pdm[keyring,template]",
-+    "pdm[keyring,template,truststore]",
+-    "pdm[keyring,msgpack,template]",
++    "pdm[keyring,msgpack,template,truststore]",
  ]
-
- [project.scripts]
+ locked = [
+     "anyio==4.9.0",
