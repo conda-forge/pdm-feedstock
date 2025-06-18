@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: Python Development Master
 
+Development: https://github.com/pdm-project/pdm
+
 Current build status
 ====================
 
