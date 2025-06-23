@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.24.2" %}
+{% set version = "2.25.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,9 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: ce0d5e9005fe26238b8ba5cf0e37ac00acab2fb90f904bf0219a5e8445849dfb
+  sha256: bff8e95c2737f68a41a8987e363803e587aea10dc9b95c34a9d3a5a117a8485f
   patches:
-    - 00-revert-truststore.patch
+     - 00-revert-truststore.patch
 
 build:
   number: 0
@@ -51,7 +51,7 @@ requirements:
     - importlib-metadata >=3.6
     - hishel >=0.0.32
     - msgpack-python >=1.0
-    - pbs-installer >=2024.4.18
+    - pbs-installer >=2025.6.6
     # pbs-installer[installer] extras
     - zstandard >=0.21.0
     - httpx <1,>0.20
@@ -70,6 +70,7 @@ test:
 
 about:
   home: https://pypi.org/project/pdm/
+  dev_url: https://github.com/pdm-project/pdm
   summary: Python Development Master
   license: MIT
   license_file: LICENSE
