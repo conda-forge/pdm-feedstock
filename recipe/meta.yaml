@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.25.4" %}
+{% set version = "2.25.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: bd655d789429928d6e27ff6693c19c82bc81aa75ba51d7b1c6102d039c8f211c
+  sha256: 063fa211dd6b062d3ca87b722e4010b802093d8b437486bfcf07ced802c544ea
   patches:
     - 00-revert-truststore.patch
 
@@ -39,7 +39,7 @@ requirements:
     - pyproject_hooks
     - unearth >=0.17.5
     - dep-logic >=0.5
-    - findpython >=0.6.0,<1.0.0a0
+    - findpython >=0.7.0,<1.0.0a0
     - tomlkit >=0.11.1,<1
     - shellingham >=1.3.2
     - python-dotenv >=0.15
