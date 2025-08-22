@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.25.5" %}
+{% set version = "2.25.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: 063fa211dd6b062d3ca87b722e4010b802093d8b437486bfcf07ced802c544ea
+  sha256: fb5fcd561986db1d83255d01e97e2e16f80debf743934d891a62ff2933ccc80c
   patches:
     - 00-revert-truststore.patch
 
@@ -32,7 +32,7 @@ requirements:
     - idna
     - python >={{ python_min }}
     - blinker
-    - packaging >=20.9,!=22.0
+    - packaging >22.0
     - platformdirs
     - rich >=12.3.0
     - virtualenv >=20
