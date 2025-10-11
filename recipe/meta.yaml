@@ -9,7 +9,7 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
   sha256: 70da10a2a8bb09858418eb7ffc5d0449c487aca1f73641611843f3adfd4ff2b4
   patches:
-    - 00-revert-truststore.patch
+    - 0001-Revert-truststore-extra-to-enable-noarch.patch
 
 build:
   number: 0
