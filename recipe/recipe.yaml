@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pdm
-  version: "2.26.4"
+  version: "2.26.5"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pdm-${{ version }}.tar.gz
-  sha256: d1030f6bd8e9449b5791e7768f1a856cc54617ee7b00f56fa1a843a84ad77f6e
+  sha256: 357c6e88aab8a65dc8730d19ae683db61dc99ea0d4c5d3856eba64b9a19e29fb
   patches:
     - 0001-Revert-truststore-extra-to-enable-noarch.patch
 
