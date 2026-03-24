@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pdm
-  version: "2.26.6"
+  version: 2.26.7
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pdm-${{ version }}.tar.gz
-  sha256: 771f95b9a484f9eb34dcf8d851be6ff95333e4f3c46189f9004cfd5cc2e925f9
+  sha256: 0a96a6fb4d60dfeacc1f68bf77efda39503833f6c01866cc8700ea403f0183b7
   patches:
     - 0001-Revert-truststore-extra-to-enable-noarch.patch
 
@@ -32,8 +32,6 @@ requirements:
     - certifi >=2024.8.30
     - httpcore >=1.0.6
     - requests
-    - chardet
-    - idna
     - python >=${{ python_min }}
     - blinker
     - packaging >22.0
@@ -49,20 +47,12 @@ requirements:
     - python-dotenv >=0.15
     - resolvelib >=1.1
     - python-installer <0.8,>=0.7
-    # truststore
     - tomli >=1.1.0
-    - importlib-resources >=5
-    - importlib-metadata >=3.6
+    - importlib-metadata
     - hishel >=1.0.0
-    - msgpack-python >=1.0
     - pbs-installer >=2025.10.7
-    # pbs-installer[installer] extras
-    - zstandard >=0.21.0
     - httpx <1,>0.20
-    # httpx[socks] extras
-    - socksio >=1,<2
     - filelock >=3.13
-
 tests:
   - python:
       python_version: ${{ python_min }}.*
