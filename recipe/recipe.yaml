@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pdm
-  version: "2.26.9"
+  version: 2.27.0
 
 package:
   name: ${{ name|lower }}
@@ -10,9 +10,8 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pdm-${{ version }}.tar.gz
-  sha256: 6f7279b5e54b2948db3dcc1495197e9d0b2c8643e8159cc835e22d8f9af083b5
-  patches:
-    - 0001-Revert-truststore-extra-to-enable-noarch.patch
+  sha256: dbfbc484065d0150fa5b29484ead908354313d8699cf74c099d4531826bd04de
+
 
 build:
   number: 0
@@ -46,13 +45,13 @@ requirements:
     - shellingham >=1.3.2
     - python-dotenv >=0.15
     - resolvelib >=1.1
-    - python-installer >=0.7
+    - python-installer >=1
     - tomli >=1.1.0
-    - importlib-metadata
     - hishel >=1.0.0
     - pbs-installer >=2025.10.7
     - httpx <1,>0.20
     - filelock >=3.13
+    - truststore >=0.10.4
 tests:
   - python:
       python_version: ${{ python_min }}.*
