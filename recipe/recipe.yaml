@@ -47,7 +47,6 @@ requirements:
     - resolvelib >=1.1
     - python-installer >=1
     - tomli >=1.1.0
-    - importlib-metadata
     - hishel >=1.0.0
     - pbs-installer >=2025.10.7
     - httpx <1,>0.20
