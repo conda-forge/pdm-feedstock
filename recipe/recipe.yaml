@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pdm
-  version: 2.27.0
+  version: 2.28.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pdm-${{ version }}.tar.gz
-  sha256: dbfbc484065d0150fa5b29484ead908354313d8699cf74c099d4531826bd04de
+  sha256: ca7d21548955086985070d2fe4334a55e59093a466b25eebc6bb0769a0539e89
 
 
 build:
@@ -52,6 +52,7 @@ requirements:
     - httpx <1,>0.20
     - filelock >=3.13
     - truststore >=0.10.4
+    - importlib-metadata
 tests:
   - python:
       python_version: ${{ python_min }}.*
