@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pdm
-  version: "2.28.2"
+  version: "2.29.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pdm-${{ version }}.tar.gz
-  sha256: dc31c1d11c2e90564207181f87ca3d6fc16ee6584d703c0a9e0c03ba287a925a
+  sha256: 28c520267a15d7a3921b934ec4bfc2d1dc18379fbb653bb20d8e840b2788be6b
 
 
 build:
