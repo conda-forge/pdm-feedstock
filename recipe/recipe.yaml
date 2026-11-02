@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pdm
-  version: "2.29.3"
+  version: 2.29.4
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pdm-${{ version }}.tar.gz
-  sha256: 320df1661a60a4e29ce813992dcd5c8c5583c1bf27d36b713895cf38f4c49e9e
+  sha256: 48d013ba869b85538fea268107cd7a2c18fd91a6abf785fa4d7ed5951808582d
 
 
 build:
@@ -28,8 +28,7 @@ requirements:
     - pdm-backend
   run:
     - id >=1.5.0
-    - certifi >=2024.8.30
-    - httpcore >=1.0.6
+    - certifi >=2026.10.19
     - requests
     - python >=${{ python_min }}
     - blinker
@@ -38,7 +37,7 @@ requirements:
     - rich >=12.3.0
     - virtualenv >=20
     - pyproject_hooks
-    - unearth >=0.17.5
+    - unearth >=0.19
     - dep-logic >=0.5
     - findpython >=0.7.0,<1.0.0a0
     - tomlkit >=0.11.1,<1
@@ -46,13 +45,13 @@ requirements:
     - python-dotenv >=0.15
     - resolvelib >=1.1
     - python-installer >=1
-    - hishel >=1.0.0
-    - pbs-installer >=2025.10.7
-    - httpx <1,>0.20
+    - hishel >=1.4.0
+    - pbs-installer >=2026.10.25
     - filelock >=3.13
     - truststore >=0.10.4
     - importlib-metadata
     - argcomplete >=3.6.3
+    - httpx2 >=2.9.1,<3
 tests:
   - python:
       python_version: ${{ python_min }}.*
