@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pdm
-  version: "2.29.6"
+  version: 2.29.7
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pdm-${{ version }}.tar.gz
-  sha256: 1bdd5f0c2a98cb8eadccdf9d4b6c80a1e9b1c05e30bf9ab6f7828e6e4928b627
+  sha256: cc58224755ef310d2c7f0f0276782b0068da9a7d5bc70da995c1bf55c1a8296a
 
 
 build:
@@ -44,7 +44,7 @@ requirements:
     - python-dotenv >=0.15
     - resolvelib >=1.1
     - python-installer >=1
-    - hishel >=1.4.0
+    - hishel >=2.0
     - pbs-installer >=2026.10.25
     - filelock >=3.13
     - truststore >=0.10.4
